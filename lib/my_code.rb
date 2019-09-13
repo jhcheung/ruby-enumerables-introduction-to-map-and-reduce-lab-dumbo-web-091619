@@ -40,12 +40,11 @@ def reduce_to_total(array, starting_point = 0)
 end
 
 def reduce_to_all_true(array)
-  for i in array do
-    if !i
-      return false
-    end 
+  final = true
+  for i in array do 
+     final = final && i
   end
-  true
+  final
 end
 
 def reduce_to_any_true(array)
