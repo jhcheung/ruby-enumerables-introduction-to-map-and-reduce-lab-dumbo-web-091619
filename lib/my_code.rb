@@ -40,17 +40,19 @@ def reduce_to_total(array, starting_point = 0)
 end
 
 def reduce_to_all_true(array)
-  final = true
-  for i in array do 
-     final = final && i
+  for i in array do
+    if !i
+      return false
+    end 
   end
-  final
+  true
 end
 
 def reduce_to_any_true(array)
-  final = false
-  for i in array do 
-     final = final || i
-  end
-  final
+  for i in array do
+    if i
+      return true
+    end 
+  end 
+  false
 end
