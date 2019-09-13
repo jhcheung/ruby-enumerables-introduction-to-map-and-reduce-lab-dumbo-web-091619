@@ -50,7 +50,7 @@ end
 def reduce_to_any_true(array)
   final = true
   for i in array do 
-     final = final && i
+     final = final || i
   end
   final
 end
